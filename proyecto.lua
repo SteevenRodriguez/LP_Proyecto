@@ -1,4 +1,4 @@
-tasks = {"Impresion", "Mail", "IO "}
+tasks = {"Impresion", "Mail", "IO"}
 lista_prioridad={}
 lista_secundaria={}
 function sleep(n)

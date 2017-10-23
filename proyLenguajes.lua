@@ -8,9 +8,11 @@ function converge(name,l1,l2)
   end
   return s
 end
+
 function sleep(n)
   os.execute("sleep " .. tonumber(n))
 end
+
 function listing(l1,l2,l3)
   local s1="Tareas de Impresiòn Realizadas: "
   local s2="Tareas de Email Realizadas: "
@@ -55,7 +57,7 @@ impre=false
   ema=false
   es=false
 while true do
-  
+    
   ocu1=false
   ocu2=false
   ocu3=false
@@ -255,6 +257,8 @@ print(listing(l_t_i,l_t_e,l_t_s))
 tim=3-sec%3
 print("Siguiente Tarea en :"..tim.." segundos")
 sleep(1)
+
+os.execute("clear")
 
 sec=sec+1
 end
