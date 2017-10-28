@@ -8,11 +8,9 @@ function converge(name,l1,l2)
   end
   return s
 end
-
 function sleep(n)
   os.execute("sleep " .. tonumber(n))
 end
-
 function listing(l1,l2,l3)
   local s1="Tareas de Impresiòn Realizadas: "
   local s2="Tareas de Email Realizadas: "
@@ -24,7 +22,6 @@ function listing(l1,l2,l3)
     s1=s1..l1[x].."-"
     end
   end
-  
   for y=1,#l2 do
     if y==#l2 then
       s2=s2..l2[y]
@@ -57,14 +54,12 @@ impre=false
   ema=false
   es=false
 while true do
-    
   ocu1=false
   ocu2=false
   ocu3=false
   ocu1o=false
   ocu2o=false
   ocu3o=false
-  
 if sec==0 or sec%3==0 then
 math.randomseed(os.time())
 r1=math.random(3)
@@ -127,10 +122,8 @@ if impre then
       ocu1=true
     end
       if #l_i_0==0 then
-      
   ocu1o=false
   else
-  
   ocu1o=true
   end
   end
@@ -237,11 +230,9 @@ if state then
     num_proc="Waiting..."
     s="Unknown"
   end
-  
 else
   num_proc=num_proc-1
 end
-
 print("Tiempo estimado de la tarea "..s.." : "..num_proc.." segundos")
 if num_proc==0 then
   state=true
@@ -257,8 +248,6 @@ print(listing(l_t_i,l_t_e,l_t_s))
 tim=3-sec%3
 print("Siguiente Tarea en :"..tim.." segundos")
 sleep(1)
-
 os.execute("clear")
-
 sec=sec+1
 end
