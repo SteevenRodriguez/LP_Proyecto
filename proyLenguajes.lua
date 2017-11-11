@@ -1,5 +1,5 @@
 function converge(name,l1,l2)
-  local s="Tareas en cola de"..name..":-"
+  local s="Tareas en cola de "..name..":-"
   for x=1,#l1 do
     s=s..l1[x].."-"
   end
@@ -12,30 +12,9 @@ function sleep(n)
   os.execute("sleep " .. tonumber(n))
 end
 function listing(l1,l2,l3)
-  local s1="Tareas de Impresiòn Realizadas: "
-  local s2="Tareas de Email Realizadas: "
-  local s3="Tareas de E/S Realizadas: "
-  for x=1,#l1 do
-    if x==#l1 then
-      s1=s1..l1[x]
-    else
-    s1=s1..l1[x].."-"
-    end
-  end
-  for y=1,#l2 do
-    if y==#l2 then
-      s2=s2..l2[y]
-    else
-    s2=s2..l2[y].."-"
-    end
-  end
-  for z=1,#l3 do
-    if z==#l3 then
-      s3=s3..l3[z]
-    else
-    s3=s3..l3[z].."-"
-    end
-  end
+  local s1="Tareas de Impresiòn Realizadas: "..#l1
+  local s2="Tareas de Email Realizadas: "..#l2
+  local s3="Tareas de E/S Realizadas: "..#l3
   local s=s1.."\n"..s2.."\n"..s3
   return s
 end
