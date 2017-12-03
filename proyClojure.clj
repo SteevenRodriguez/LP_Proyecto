@@ -1,3 +1,4 @@
+(use '[clojure.java.shell :only [sh]])
 (def lst_i_1 (vector))
 (def lst_i_0 (vector))
 (def lst_e_1 (vector))
@@ -19,7 +20,7 @@
 (def r_prev_impre false)
 (def r_prev_email false)
 (def r_prev_es false)
-(while (= 5 5)
+(while (true)
       (do
         (def ocu1 false)
         (def ocu1o false)
@@ -148,6 +149,7 @@
         (println "Siguiente tarea en " (- 3 (mod cont 3)) " segundos")
         (alter-var-root #'cont inc)
         (Thread/sleep 1000)
+        (println (sh "clear"))
          )
   )
 
